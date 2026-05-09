@@ -11,6 +11,7 @@ import java.util.Scanner;
  * @author Jeff
  */
 public class Ejercicio_10 {
+
     public static void Actividad() {
         Scanner input = new Scanner(System.in);
 
@@ -32,14 +33,7 @@ public class Ejercicio_10 {
             switch (opcion) {
                 case 1:
                     if (contador < maxPedidos) {
-                        Utilitarios.registrarPedido(
-                                input,
-                                clientes,
-                                platos,
-                                cantidades,
-                                preciosUnitarios,
-                                contador
-                        );
+                        Utilitarios.registrarPedido(input, clientes, platos, cantidades, preciosUnitarios, contador);
 
                         contador++;
                     } else {
@@ -48,63 +42,31 @@ public class Ejercicio_10 {
                     break;
 
                 case 2:
-                    Utilitarios.mostrarReportePedidos(
-                            clientes,
-                            platos,
-                            cantidades,
-                            preciosUnitarios,
-                            contador
-                    );
+                    Utilitarios.mostrarReportePedidos(clientes, platos, cantidades, preciosUnitarios, contador);
                     break;
 
                 case 3:
-                    double ingresoTotal = Servicios.calcularIngresoTotal(
-                            cantidades,
-                            preciosUnitarios,
-                            contador
-                    );
+                    double ingresoTotal = Servicios.calcularIngresoTotal(cantidades, preciosUnitarios, contador);
 
                     System.out.println("\nIngreso total del restaurante: $" + ingresoTotal);
                     break;
 
                 case 4:
-                    Servicios.mostrarPedidoMayorValor(
-                            clientes,
-                            platos,
-                            cantidades,
-                            preciosUnitarios,
-                            contador
-                    );
+                    Servicios.mostrarPedidoMayorValor(clientes, platos, cantidades, preciosUnitarios, contador);
                     break;
 
                 case 5:
                     System.out.println("\nPrograma finalizado.");
 
                     System.out.println("\n--- REPORTE FINAL DE PEDIDOS ---");
-                    Utilitarios.mostrarReportePedidos(
-                            clientes,
-                            platos,
-                            cantidades,
-                            preciosUnitarios,
-                            contador
-                    );
+                    Utilitarios.mostrarReportePedidos(clientes, platos, cantidades,preciosUnitarios, contador);
 
-                    double totalFinal = Servicios.calcularIngresoTotal(
-                            cantidades,
-                            preciosUnitarios,
-                            contador
-                    );
+                    double totalFinal = Servicios.calcularIngresoTotal(cantidades, preciosUnitarios, contador);
 
                     System.out.println("\nIngreso total del restaurante: $" + totalFinal);
 
                     System.out.println("\n--- PEDIDO DE MAYOR VALOR ---");
-                    Servicios.mostrarPedidoMayorValor(
-                            clientes,
-                            platos,
-                            cantidades,
-                            preciosUnitarios,
-                            contador
-                    );
+                    Servicios.mostrarPedidoMayorValor(clientes, platos, cantidades, preciosUnitarios, contador);
                     break;
 
                 default:

@@ -33,14 +33,7 @@ public class Ejercicio_9 {
             switch (opcion) {
                 case 1:
                     if (contador < maxMedicamentos) {
-                        Utilitarios.registrarMedicamento(
-                                input,
-                                nombres,
-                                stockActual,
-                                stockMinimo,
-                                precioUnitario,
-                                contador
-                        );
+                        Utilitarios.registrarMedicamento(input, nombres, stockActual, stockMinimo, precioUnitario, contador);
 
                         contador++;
                     } else {
@@ -49,60 +42,30 @@ public class Ejercicio_9 {
                     break;
 
                 case 2:
-                    Servicios.mostrarMedicamentosStockBajo(
-                            nombres,
-                            stockActual,
-                            stockMinimo,
-                            contador
-                    );
+                    Servicios.mostrarMedicamentosStockBajo(nombres,stockActual,stockMinimo,contador);
                     break;
 
                 case 3:
-                    double totalInventario = Servicios.calcularValorTotalInventario(
-                            stockActual,
-                            precioUnitario,
-                            contador
-                    );
+                    double totalInventario = Servicios.calcularValorTotalInventario(stockActual,precioUnitario,contador);
 
                     System.out.println("\nValor economico total del inventario: $" + totalInventario);
                     break;
 
                 case 4:
-                    Servicios.registrarVenta(
-                            input,
-                            nombres,
-                            stockActual,
-                            contador
-                    );
+                    Servicios.registrarVenta(input,nombres,stockActual,contador);
                     break;
 
                 case 5:
-                    Utilitarios.mostrarReporteGeneral(
-                            nombres,
-                            stockActual,
-                            stockMinimo,
-                            precioUnitario,
-                            contador
-                    );
+                    Utilitarios.mostrarReporteGeneral(nombres,stockActual,stockMinimo,precioUnitario,contador);
                     break;
 
                 case 6:
                     System.out.println("\nPrograma finalizado.");
 
                     System.out.println("\n--- REPORTE FINAL DEL INVENTARIO ---");
-                    Utilitarios.mostrarReporteGeneral(
-                            nombres,
-                            stockActual,
-                            stockMinimo,
-                            precioUnitario,
-                            contador
-                    );
+                    Utilitarios.mostrarReporteGeneral(nombres,stockActual,stockMinimo,precioUnitario,contador);
 
-                    double totalFinal = Servicios.calcularValorTotalInventario(
-                            stockActual,
-                            precioUnitario,
-                            contador
-                    );
+                    double totalFinal = Servicios.calcularValorTotalInventario(stockActual,precioUnitario,contador);
 
                     System.out.println("\nValor economico total del inventario: $" + totalFinal);
                     break;

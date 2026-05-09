@@ -24,14 +24,7 @@ public class Utilitarios {
         return input.nextInt();
     }
 
-    public static void registrarMedicamento(
-            Scanner input,
-            String[] nombres,
-            int[] stockActual,
-            int[] stockMinimo,
-            double[] precioUnitario,
-            int posicion
-    ) {
+    public static void registrarMedicamento(Scanner input,String[] nombres,int[] stockActual,int[] stockMinimo,double[] precioUnitario,int posicion) {
         input.nextLine();
 
         System.out.println("\n--- REGISTRAR MEDICAMENTO ---");
@@ -51,13 +44,7 @@ public class Utilitarios {
         System.out.println("Medicamento registrado correctamente.");
     }
 
-    public static void mostrarReporteGeneral(
-            String[] nombres,
-            int[] stockActual,
-            int[] stockMinimo,
-            double[] precioUnitario,
-            int contador
-    ) {
+    public static void mostrarReporteGeneral(String[] nombres,int[] stockActual,int[] stockMinimo,double[] precioUnitario,int contador) {
         System.out.println("\n--- REPORTE GENERAL DEL INVENTARIO ---");
 
         if (contador == 0) {

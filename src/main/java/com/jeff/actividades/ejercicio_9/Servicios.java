@@ -11,12 +11,7 @@ import java.util.Scanner;
  * @author Jeff
  */
 public class Servicios {
-    public static void mostrarMedicamentosStockBajo(
-            String[] nombres,
-            int[] stockActual,
-            int[] stockMinimo,
-            int contador
-    ) {
+    public static void mostrarMedicamentosStockBajo(String[] nombres,int[] stockActual,int[] stockMinimo,int contador) {
         System.out.println("\n--- MEDICAMENTOS CON STOCK BAJO ---");
 
         if (contador == 0) {
@@ -40,11 +35,7 @@ public class Servicios {
         }
     }
 
-    public static double calcularValorTotalInventario(
-            int[] stockActual,
-            double[] precioUnitario,
-            int contador
-    ) {
+    public static double calcularValorTotalInventario(int[] stockActual,double[] precioUnitario,int contador) {
         double total = 0;
 
         for (int i = 0; i < contador; i++) {
@@ -54,12 +45,7 @@ public class Servicios {
         return total;
     }
 
-    public static void registrarVenta(
-            Scanner input,
-            String[] nombres,
-            int[] stockActual,
-            int contador
-    ) {
+    public static void registrarVenta(Scanner input,String[] nombres,int[] stockActual,int contador) {
         if (contador == 0) {
             System.out.println("\nNo hay medicamentos registrados.");
             return;
@@ -100,11 +86,7 @@ public class Servicios {
         }
     }
 
-    public static int buscarMedicamentoPorNombre(
-            String[] nombres,
-            String nombreBuscar,
-            int contador
-    ) {
+    public static int buscarMedicamentoPorNombre(String[] nombres,String nombreBuscar,int contador) {
         for (int i = 0; i < contador; i++) {
             if (nombres[i].equalsIgnoreCase(nombreBuscar)) {
                 return i;
